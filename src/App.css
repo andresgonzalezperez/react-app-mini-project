@@ -2,10 +2,7 @@ body {
   margin: 0 auto;
   padding: 0;
   min-width: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -16,15 +13,27 @@ body {
 
 /* Navbar */
 nav {
+  position: relative;    
   display: flex;
   align-items: center;
+  min-height: 15vh; 
   height: 10vh;
-  background-color: #ff5722;
-  color: white;
+  background-color: #f2e7c2;
+  color: #2e4b57;
+  padding: 0 30px;
 }
 
 nav img {
-  height: 80%;
+  height: 100%;
+}
+
+nav h1 {
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-shadow: 2px 2px 5px black;
 }
 
 /* Layout principal */
@@ -36,8 +45,9 @@ nav img {
 /* Sidebar */
 .sidebar {
   width: 200px;
-  background-color: #f4f4f4;
-  padding: 20px;
+  background-color: white;
+  padding: 30px;
+
 }
 
 .sidebar ul {
@@ -46,13 +56,38 @@ nav img {
 }
 
 .sidebar li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 10px;
+  height: 10px;
+  border: 1px solid #000000;
+  background-color: #2e4b57;
 }
 
 .sidebar a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
+}
+
+/* RecipiesList */
+.recipe-card{
+  display: flex;
+  align-items: center;
+  padding: 5vh;
+  margin: 15px;
+  border-radius: 10px;  
+  color: #000000;
+  box-shadow: 0 4px 10px #2e4b57;rgb(245, 2, 2);
+}
+.recipe-image {
+  width: 350px;  
+  height: 350px;          
 }
 
 /* Main */
