@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
@@ -10,7 +11,20 @@ import ItemDetailsPage from "./pages/ItemDetailsPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import recipesData from "./assets/recipes.json";
+
 function App() {
+  const [recipes, setRecipes] = useState(recipesData);
+
+  function handleAddRecipe(newRecipe) {
+  setRecipes([newRecipe, ...recipes]);
+}
+
+  function handleDeleteRecipe(idToDelete) {
+    const updatedRecipes = recipes.filter((recipe) => recipe.id !== idToDelete);
+    setRecipes(updatedRecipes);
+  }
+
   return (
     <>
       <Navbar />
@@ -20,7 +34,16 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            <Route
+              path="/"
+              element={
+                <DashboardPage
+                  recipes={recipes}
+                  handleAddRecipe={handleAddRecipe}
+                  handleDeleteRecipe={handleDeleteRecipe}
+                />
+              }
+            />
             <Route path="/item/:id" element={<ItemDetailsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<NotFoundPage />} />
@@ -34,8 +57,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

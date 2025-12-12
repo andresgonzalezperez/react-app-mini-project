@@ -1,15 +1,6 @@
-import { useState } from "react";
-import recipesData from "../assets/recipes.json";
 import RecipeCard from "./RecipeCard";
 
-const RecipesList = () => {
-  const [recipes, setRecipes] = useState(recipesData);
-
-  const deleteRecipe = (idToDelete) => {
-    const updatedRecipes = recipes.filter((recipe) => recipe.id !== idToDelete);
-    setRecipes(updatedRecipes);
-  };
-
+const RecipesList = ({ recipes, deleteRecipe }) => {
   return (
     <div className="recipes-grid">
       {recipes.map((recipe) => (
@@ -24,5 +15,6 @@ const RecipesList = () => {
 };
 
 export default RecipesList;
+
 
 
