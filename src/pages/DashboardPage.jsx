@@ -5,8 +5,8 @@ import AddRecipe from "./AddRecipe";
 const DashboardPage = ({recipes, handleAddRecipe, handleDeleteRecipe}) => {
   return (
     <div>
-      <h2>Our Recipes</h2>
       <AddRecipe handleAddRecipe={handleAddRecipe} />
+      <h2>Our Recipes</h2>
       <RecipesList recipes={recipes} deleteRecipe={handleDeleteRecipe} />
     </div>
   );

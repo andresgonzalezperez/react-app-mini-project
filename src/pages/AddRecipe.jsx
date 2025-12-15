@@ -29,10 +29,10 @@ function AddRecipe({ handleAddRecipe }) {
   return (
     <div className="Form-new-recipe">
       <form onSubmit={handleFormSubmit}>
-        <span>Add a new recipe</span>
+        <span className="new-recipe">Add a new recipe</span>
 
         <label>
-          Name
+          <p>Name</p>
           <input
             name="name"
             type="text"
@@ -43,7 +43,7 @@ function AddRecipe({ handleAddRecipe }) {
         </label>
 
         <label>
-          Calories
+          <p>Calories</p>
           <input
             name="calories"
             type="number"
@@ -54,7 +54,7 @@ function AddRecipe({ handleAddRecipe }) {
         </label>
 
         <label>
-          Recipe Image
+          <p>Recipe Image</p>
           <input
             name="image"
             type="url"
@@ -65,7 +65,7 @@ function AddRecipe({ handleAddRecipe }) {
         </label>
 
         <label>
-          Servings
+          <p>Servings</p>
           <input
             name="servings"
             type="number"
@@ -76,7 +76,7 @@ function AddRecipe({ handleAddRecipe }) {
         </label>
 
         <button className="Add-recipe-button" type="submit">
-          Add recipe
+          ADD RECIPE
         </button>
       </form>
     </div>

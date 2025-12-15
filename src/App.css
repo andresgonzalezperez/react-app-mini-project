@@ -38,6 +38,7 @@ nav h1 {
 
 /* Layout principal */
 .main-layout {
+  font-family: "Copperplate Gothic", "Copperplate", serif;
   display: flex;
   min-height: 70vh; 
 }
@@ -56,6 +57,7 @@ nav h1 {
 }
 
 .sidebar li {
+  font-family: "Copperplate Gothic", "Copperplate", serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +76,46 @@ nav h1 {
   color: white;
   font-weight: bold;
 }
+
+/*Add Recepies*/
+.Form-new-recipe{
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;  
+  width: 300px; 
+  padding: 30px;              
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;       
+  font-size: 20px;
+}
+.new-recipe{
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #cf5648;
+  border-radius: 6px;
+  color: white;
+}
+
+.Add-recipe-button{
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #2f4858;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  }
 
 /* RecipiesList */
 .recipe-card{
