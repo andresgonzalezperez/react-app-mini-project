@@ -1,16 +1,17 @@
 body {
   margin: 0 auto;
   padding: 0;
-  min-width: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-image: url("./assets/background-image.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: black;
-  font-family: Arial, sans-serif;
+  font-family: "Copperplate Gothic", "Copperplate", serif;
 }
-
 #root{
   width: 100%;
 }
-
 /* Navbar */
 nav {
   position: relative;    
@@ -22,13 +23,10 @@ nav {
   color: #2e4b57;
   padding: 0 30px;
 }
-
 nav img {
   height: 100%;
 }
-
 nav h1 {
-  font-family: "Copperplate Gothic", "Copperplate", serif;
   font-weight: bold;
   font-size: 50px;
   position: absolute; 
@@ -36,29 +34,33 @@ nav h1 {
   transform: translateX(-50%);
   margin: 0;
 }
-
+.our-recipes{
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  text-align: center;
+  font-size: 50px;
+  box-shadow:0 5px 10px #2e4b57;
+  height: 7vh; 
+  width: 102vh;
+  border-radius: 10px;
+  margin-left: 22vh;
+  background-color: white;
+}
 /* Layout principal */
 .main-layout {
-  font-family: "Copperplate Gothic", "Copperplate", serif;
   display: flex;
-  min-height: 70vh; 
+  min-height: 60vh; 
 }
-
 /* Sidebar */
 .sidebar {
   width: 200px;
   background-color: white;
   padding: 30px;
-
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
-
 .sidebar li {
-  font-family: "Copperplate Gothic", "Copperplate", serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,13 +73,11 @@ nav h1 {
   border: 1px solid #000000;
   background-color: #2e4b57;
 }
-
 .sidebar a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
-
 /*Add Recepies*/
 .Form-new-recipe{
   font-family: "Copperplate Gothic", "Copperplate", serif;
@@ -85,12 +85,12 @@ nav h1 {
   flex-direction: column;
   gap: 10px;
   text-align: center;  
-  width: 300px; 
-  padding: 30px;              
+  width: 500px; 
+  padding: 20px;              
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  margin: auto;       
+  margin-left: 28%;    
   font-size: 20px;
 }
 .new-recipe{
@@ -103,7 +103,6 @@ nav h1 {
   border-radius: 6px;
   color: white;
 }
-
 .Add-recipe-button{
   font-family: "Copperplate Gothic", "Copperplate", serif;
   display: block;
@@ -117,20 +116,57 @@ nav h1 {
   border-radius: 6px;
   cursor: pointer;
   }
-
 /* RecipiesList */
 .recipe-card{
   display: flex;
   align-items: center;
-  padding: 5vh;
-  margin: 15px;
+  padding: 0vh;
+  margin: 5vh;
+  margin-left: 15%;
   border-radius: 10px;  
+  width: 99vh;
   color: #000000;
+  background-color: white;
   box-shadow: 0 4px 10px #2e4b57;
 }
 .recipe-image {
   width: 350px;  
   height: 350px;          
+  object-fit: contain;
+  padding: 0vh;
+  margin: 5vh;
+  border-radius: 10px;  
+  color: #000000;
+  box-shadow: 0 4px 10px #2e4b57;
+}
+.recipe-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0vh;
+  margin: 10vh;
+  width: 24vh;
+  color: #000000;
+}
+.delete-button-recipe{
+  font-family: "Copperplate Gothic", "Copperplate", serif;
+  display: block;
+  margin-top: 35vh;
+  padding: 15px;
+  background-color: #2f4858;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*Recipe Details*/
+.recipe-details{
+  display: block;
+  text-align: center;
+  margin-left: 50vh;
+  box-shadow: 0 4px 10px #2e4b57;
+  width: 30vh;
+  
 }
 
 /* Main */
@@ -138,7 +174,6 @@ main {
   flex: 1;
   padding: 20px;
 }
-
 /* Footer */
 footer {
   background-color: #5d5d5d;
@@ -148,23 +183,19 @@ footer {
   align-items: center;
   justify-content: space-around;
 }
-
 footer img {
   height: 30px;
 }
-
 .team-member {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
-
 .team-name {
   font-size: 1.4rem;      
   font-weight: 600;       
   margin-bottom: 10px;    
 }
-
 .team-img {
   width: 300px;       
   height: 300px;       
@@ -172,4 +203,3 @@ footer img {
   object-fit: cover;   
   margin-left: 12px;   
 }
-

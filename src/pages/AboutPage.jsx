@@ -1,5 +1,5 @@
-import valentinImg from "../assets/valentin.jpg";
-import andresImg from "../assets/andres.JPG";
+import valentinImg from "../assets/valentin.png";
+import andresImg from "../assets/andres.png";
 
 const AboutPage = () => {
   return (

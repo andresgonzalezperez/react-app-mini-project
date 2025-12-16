@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import recipesData from "../assets/recipes.json";
 
-const ItemDetailsPage = () => {
+const RecipeDetailsPage = () => {
   const { id } = useParams();
   const recipe = recipesData.find((item) => item.id === id);
 
@@ -10,7 +10,7 @@ const ItemDetailsPage = () => {
   }
 
   return (
-    <div>
+    <div className="recipe-details">
       <h1>{recipe.name}</h1>
       <img src={recipe.image} alt={recipe.name} width="300" />
       <p>Calories: {recipe.calories}</p>
@@ -19,5 +19,5 @@ const ItemDetailsPage = () => {
   );
 };
 
-export default ItemDetailsPage;
+export default RecipeDetailsPage;
 

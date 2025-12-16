@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
 import DashboardPage from "./pages/DashboardPage";
-import ItemDetailsPage from "./pages/ItemDetailsPage";
+import RecipeDetailsPage from "./pages/RecipeDetailsPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -44,7 +44,7 @@ function App() {
                 />
               }
             />
-            <Route path="/item/:id" element={<ItemDetailsPage />} />
+            <Route path="/item/:id" element={<RecipeDetailsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

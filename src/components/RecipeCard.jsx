@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const RecipeCard = ({ recipe, deleteRecipe }) => {
   const isLight = recipe.calories <= 150;
 
@@ -10,7 +12,11 @@ const RecipeCard = ({ recipe, deleteRecipe }) => {
       />
 
       <div className="recipe-info">
-        <h1>{recipe.name}</h1>
+        <h1>
+          <Link to={`/item/${recipe.id}`}>
+          {recipe.name}
+          </Link>
+          </h1>
         <h2>Calories: {recipe.calories}</h2>
 
         <h3 className="recipe-labels">
@@ -19,7 +25,7 @@ const RecipeCard = ({ recipe, deleteRecipe }) => {
         </h3>
       </div>
 
-      <button onClick={() => deleteRecipe(recipe.id)}>
+      <button onClick={() => deleteRecipe(recipe.id)} className="delete-button-recipe">
         Delete
       </button>
     </div>
