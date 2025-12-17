@@ -12,7 +12,7 @@ const RecipeDetailsPage = () => {
   return (
     <div className="recipe-details">
       <h1>{recipe.name}</h1>
-      <img src={recipe.image} alt={recipe.name} width="300" />
+      <img src={recipe.image} alt={recipe.name} width="800" />
       <p>Calories: {recipe.calories}</p>
       <p>Servings: {recipe.servings}</p>
     </div>

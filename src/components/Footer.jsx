@@ -3,11 +3,12 @@ import logoGitHub from "../assets/github-logo.png"
 function Footer() {
   return (
     <footer>
-        <a href="https://github.com/andresgonzalezperez/react-app-mini-project.git">
-        <img src ={logoGitHub}  alt = "Git Hub Logo"/>
-        <p>GitHub Repository</p>
-        </a>
-    </footer>
+  <img src={logoGitHub} alt="GitHub Logo" />
+  <a href="https://github.com/andresgonzalezperez/react-app-mini-project.git">
+    GitHub Repository
+  </a>
+</footer>
+
 
   )
 }
